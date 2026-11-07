@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -9,7 +9,7 @@ import useAuth from "../../hooks/useAuth";
 const Indexsignin = () => {
 
     const { signin } = useAuth();
-    const navigate = useAuth();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");

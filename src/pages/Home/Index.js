@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button";
+import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";

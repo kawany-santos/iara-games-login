@@ -1,6 +1,7 @@
 import React from "react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import { useState } from 'react';
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
