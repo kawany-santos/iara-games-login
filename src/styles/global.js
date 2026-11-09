@@ -9,9 +9,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        width:100vw;
-        height:100vw;
-        background-color: 3f0f2f5;
+        width:100%;
+        height:100%;
+        background-color: #08070D;
+        align-items:center;
+        justify-content: center;
+        display:flex;
+        padding-top: 5%;
     }
 `;
 

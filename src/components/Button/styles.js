@@ -4,12 +4,12 @@ export const Button = styled.button`
     padding: 16px 20px;
     outiline: none;
     border: none;
-    border-radius: 5px;
-    widht: 100%;
+    border-radius: 12px;
+    width: 60%;
     cursor: pointer;
-    background-color: #aab459;
+    background-color: #F0EEE9;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.5rem;
-    max-width: 350px;
+    color: #000;
 `;

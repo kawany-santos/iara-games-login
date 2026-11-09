@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../components/Input/Input";
+import { InputName } from "../../components/Input/styles";
+import { Form } from "../../components/Input/styles";
 import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
@@ -33,21 +35,60 @@ const Indexsignin = () => {
  
 
     return(
-            <C.Container>
-                <C.Label>Sistema de login</C.Label>
-                <C.Content>
-                    <Input 
-                        type="email"
-                        placeholder="Digite seu e-mail"
-                        value={email}
-                        onChange={(e) => [setEmail(e.target.value), setError("")]}
-                    />
-                    <Input 
-                        type="password"
-                        placeholder="Digite sua senha"
-                        value={senha}
-                        onChange={(e) => [setSenha(e.target.value), setError("")]}
-                    />
+        <C.Container>
+            <C.Content>
+                <C.TextBox>
+                    <C.Subtitulo>
+                        Participe agore
+                    </C.Subtitulo>
+                    <C.TextContent>
+                        Entre no mundo mágico dos games brasileiros.
+                    </C.TextContent>
+                </C.TextBox>
+                <C.CardBox>
+                    <C.CardWhite>
+                        <C.IconGame />
+                        Encontre seus novos jogos favoritos Nacionais
+                    </C.CardWhite>
+                    <C.Card>
+                        <C.IconChat />
+                        Converse com  outros jogadores
+                    </C.Card>
+                    <C.Card>
+                        <C.IconMedal />
+                        Mostre sua opinião, avalie os jogos
+                    </C.Card>
+                </C.CardBox>
+            </C.Content>
+            <C.FormContainer>
+                <C.LabelText>
+                    <C.Titulo>
+                        Log In
+                    </C.Titulo>
+                    <C.Descript>
+                        Digite o seus dados para logar em sua conta.
+                    </C.Descript>
+                </C.LabelText>
+                <Form>
+                    <InputName>
+                        E-mail
+                    </InputName>
+                                        <Input 
+                            type="email"
+                            placeholder="Digite seu e-mail"
+                            value={email}
+                            onChange={(e) => [setEmail(e.target.value), setError("")]}
+                        />
+                        <InputName>
+                            Senha
+                        </InputName>
+                        <Input 
+                            type="password"
+                            placeholder="Digite sua senha"
+                            value={senha}
+                            onChange={(e) => [setSenha(e.target.value), setError("")]}
+                        />
+                    </Form>
                     <C.LabelError>{error}</C.LabelError>
                     <Button text="Entrar" onClick={HandleLogin} />
                     <C.LabelSignup>
@@ -56,8 +97,9 @@ const Indexsignin = () => {
                             <Link to="/signup">&nbsp;Registre-se</Link>
                         </C.Strong>
                     </C.LabelSignup>
-                </C.Content>
-            </C.Container>
+            </C.FormContainer>
+        </C.Container>
+
     );
 };
 
