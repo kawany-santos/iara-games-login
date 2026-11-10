@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { FontFamilies } from '../../shared/DesignTokens';
+
 import gameIcon from '../../img/icons/game-8-svgrepo-com.svg';
 import chatIcon from '../../img/icons/chat2-svgrepo-com.svg';
 import medalhaIcon from '../../img/icons/star-medal-svgrepo-com.svg';
@@ -46,6 +48,10 @@ export const FormContainer = styled.div`
     flex-direction: column;
     width: 40%;
     height: 85vh;
+    @media (max-width: 1200px){
+        width: 80%;
+        gap: 1%;
+    }
 `;
 
 export const FundoSigin = styled.img.attrs({
@@ -64,6 +70,9 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @media (max-width: 1300px){
+        display: none;
+    }
 `;
 
 export const TextBox = styled.div`
@@ -74,7 +83,9 @@ export const TextBox = styled.div`
     width: 90%
     gap: 5%;
     height: 200px;
-
+    @media (max-width: 1200px){
+        display: none;
+    }
 `;
 
 export const Subtitulo = styled.h3`
@@ -83,6 +94,7 @@ export const Subtitulo = styled.h3`
     font-wight: 600;
     text-align: left;
     width: 45%;
+    font-family: ${FontFamilies.TITLE};
 `;
 
 export const TextContent = styled.p`
@@ -91,6 +103,7 @@ export const TextContent = styled.p`
     font-wight: 400;
     text-align: left;
     width: 45%;
+    font-family: ${FontFamilies.TEXT};
 `;
 
 export const CardBox = styled.div`
@@ -100,12 +113,14 @@ export const CardBox = styled.div`
     gap: 15px;
     height: 200px;
     justify-content:center;
-
+    @media (max-width: 1200px){
+        display: none;
+    }
 `;
 
 export const CardWhite = styled.div`
     width: 200px;
-    heiht: 200px;
+    height: 200px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -116,11 +131,13 @@ export const CardWhite = styled.div`
     font-size: 1.2rem;
     font-wight: 400;
     text-align: left;
+    font-family: ${FontFamilies.TEXT};
+
 `;
 
 export const Card = styled.div`
     width: 200px;
-    heiht: 200px;
+    height: 200px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -131,6 +148,8 @@ export const Card = styled.div`
     font-size: 1.2rem;
     font-wight: 400;
     text-align: left;
+    font-family: ${FontFamilies.TEXT};
+
 `;
 
 export const LabelText = styled.label`
@@ -138,6 +157,14 @@ export const LabelText = styled.label`
     flex-direction: column;
     gap: 10px;
     height: 100px;
+
+    @media (max-width: 500px){
+        width: 80%;
+        height: 50px;
+
+    }
+
+        
 `;
 
 export const Titulo = styled.h1`
@@ -145,6 +172,11 @@ export const Titulo = styled.h1`
     font-wight: 600;
     color: #fff;
     text-align: center;
+    @media (max-width: 500px){
+        font-size: 1.8rem;
+    }
+    font-family: ${FontFamilies.TITLE};
+
 `;
 
 export const Descript = styled.h4`
@@ -152,6 +184,10 @@ export const Descript = styled.h4`
     font-wight: 400;
     color: #fff;
     text-align: center;
+    @media (max-width: 500px){
+        font-size: 1rem;
+    }
+    font-family: ${FontFamilies.TEXT};
 
 `;
 
@@ -159,12 +195,19 @@ export const LabelSignup = styled.label`
     font-size: 1.4rem;
     color: #fff;
     padding-top: 30px;
+    @media (max-width: 500px){
+        text-align: center;
+    }
+    font-family: ${FontFamilies.TEXT};
+
 `;
 
 export const LabelError = styled.label`
     font-size: 1.2rem;
     font-wight: 600;
     color: #df2b2b;
+    font-family: ${FontFamilies.TEXT};
+
 `;
 
 export const Strong = styled.strong`

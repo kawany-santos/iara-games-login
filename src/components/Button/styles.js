@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import { FontFamilies } from '../../shared/DesignTokens';
+
+
 export const Button = styled.button`
     padding: 16px 20px;
     outiline: none;
@@ -11,5 +14,10 @@ export const Button = styled.button`
     color: white;
     font-weight: 500;
     font-size: 1.5rem;
+    font-family: ${FontFamilies.TITLE};
+
     color: #000;
+        @media (max-width: 500px){
+        width: 80%;
+    }
 `;
