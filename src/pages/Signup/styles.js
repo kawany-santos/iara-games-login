@@ -5,7 +5,7 @@ import { FontFamilies } from '../../shared/DesignTokens';
 import OneIcon from '../../img/icons/one-closed-svgrepo-com.svg';
 import TwoIcon from '../../img/icons/two-closed-svgrepo-com.svg';
 import ThreeIcon from '../../img/icons/three-closed-svgrepo-com.svg';
-import FundoSignup from '../../img/images/fundo_signup.png';
+
 
 export const IconOne = styled.img.attrs({
     src: OneIcon,
@@ -31,13 +31,7 @@ export const IconThree = styled.img.attrs({
 
 `;
 
-export const FundoUp = styled.img.attrs({
-    src: FundoSignup,
-})`
-    width: 40%;
-    height: 85vh;
 
-`;
 
 export const Container = styled.div`
     display: flex;
@@ -56,7 +50,9 @@ export const FormContainer = styled.div`
     flex-direction: column;
     width: 40%;
     height: 85vh;
-    
+    @media (max-width: 1200px){
+        width: 80%;
+    }
 `;
 
 
@@ -69,6 +65,9 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 6%;
+    @media (max-width: 1200px){
+        display: none;
+    }
 
 `;
 

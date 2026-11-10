@@ -7,6 +7,8 @@ import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import fundoImg from '../../img/images/fundo_signup.png'; 
+
 
 const Indexsignup = () => {
 
@@ -37,6 +39,14 @@ const Indexsignup = () => {
 
         alert("Usuário cadastrado com sucesso!");
         navigate("/");
+    };
+
+    const estiloFundo = {
+        backgroundImage: `url(${fundoImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '80vh',
+        width: '45vw',
     };
 
     return(
@@ -88,7 +98,7 @@ const Indexsignup = () => {
                     </C.Strong>
                 </C.LabelSignup>  
             </C.FormContainer>
-            <C.Content>
+            <C.Content style={estiloFundo}>
                 <C.TextBox>
                     <C.Subtitulo>
                         Começe com a gente

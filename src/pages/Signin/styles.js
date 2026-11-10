@@ -5,7 +5,6 @@ import { FontFamilies } from '../../shared/DesignTokens';
 import gameIcon from '../../img/icons/game-8-svgrepo-com.svg';
 import chatIcon from '../../img/icons/chat2-svgrepo-com.svg';
 import medalhaIcon from '../../img/icons/star-medal-svgrepo-com.svg';
-import FundoImg from '../../img/images/fundo_signin.png';
 
 export const IconGame = styled.img.attrs({
     src: gameIcon,
@@ -54,13 +53,7 @@ export const FormContainer = styled.div`
     }
 `;
 
-export const FundoSigin = styled.img.attrs({
-    src: FundoImg,
-})`
-    width: 40%;
-    height: 85vh;
 
-`;
 export const Content = styled.div`
     width: 40%;
     height: 85vh;

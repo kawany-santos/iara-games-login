@@ -6,6 +6,8 @@ import Button from "../../components/Button/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import fundoImg from '../../img/images/fundo_signin.png'; 
+
 
 
 const Indexsignin = () => {
@@ -32,11 +34,19 @@ const Indexsignin = () => {
 
         navigate("/home");
     };
+
+     const estiloFundo = {
+    backgroundImage: `url(${fundoImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '80vh',
+    width: '45vw',
+  };
  
 
     return(
         <C.Container>
-            <C.Content>
+            <C.Content style={estiloFundo}>
                 <C.TextBox>
                     <C.Subtitulo>
                         Participe agore
